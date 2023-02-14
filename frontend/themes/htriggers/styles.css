@@ -1,0 +1,5 @@
+@import url('./main-layout.css');
+@import url('./views/triggers-view.css');
+@import url('./views/login-view.css');
+@import url('./views/signup-view.css');
+@import url('line-awesome/dist/line-awesome/css/line-awesome.min.css');
