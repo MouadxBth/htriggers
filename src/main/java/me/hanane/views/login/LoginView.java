@@ -23,21 +23,21 @@ import me.hanane.data.service.SamplePersonService;
 import me.hanane.views.MainLayout;
 
 @PageTitle("Login")
-@Route(value = "login", layout = MainLayout.class)
+@Route(value = "logins", layout = MainLayout.class)
 @Uses(Icon.class)
 public class LoginView extends Div {
 
-    private TextField firstName = new TextField("First name");
-    private TextField lastName = new TextField("Last name");
-    private EmailField email = new EmailField("Email address");
-    private DatePicker dateOfBirth = new DatePicker("Birthday");
-    private PhoneNumberField phone = new PhoneNumberField("Phone number");
-    private TextField occupation = new TextField("Occupation");
+    private final TextField firstName = new TextField("First name");
+    private final TextField lastName = new TextField("Last name");
+    private final EmailField email = new EmailField("Email address");
+    private final DatePicker dateOfBirth = new DatePicker("Birthday");
+    private final PhoneNumberField phone = new PhoneNumberField("Phone number");
+    private final TextField occupation = new TextField("Occupation");
 
-    private Button cancel = new Button("Cancel");
-    private Button save = new Button("Save");
+    private final Button cancel = new Button("Cancel");
+    private final Button save = new Button("Save");
 
-    private Binder<SamplePerson> binder = new Binder<>(SamplePerson.class);
+    private final Binder<SamplePerson> binder = new Binder<>(SamplePerson.class);
 
     public LoginView(SamplePersonService personService) {
         addClassName("login-view");
@@ -82,8 +82,8 @@ public class LoginView extends Div {
     }
 
     private static class PhoneNumberField extends CustomField<String> {
-        private ComboBox<String> countryCode = new ComboBox<>();
-        private TextField number = new TextField();
+        private final ComboBox<String> countryCode = new ComboBox<>();
+        private final TextField number = new TextField();
 
         public PhoneNumberField(String label) {
             setLabel(label);

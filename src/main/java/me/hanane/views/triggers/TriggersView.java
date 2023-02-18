@@ -35,9 +35,13 @@ import me.hanane.views.MainLayout;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
+
 @PageTitle("Triggers")
 @Route(value = "triggers/:samplePersonID?/:action?(edit)", layout = MainLayout.class)
 @Uses(Icon.class)
+@PermitAll
 public class TriggersView extends Div implements BeforeEnterObserver {
 
     private final String SAMPLEPERSON_ID = "samplePersonID";
